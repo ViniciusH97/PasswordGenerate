@@ -44,4 +44,4 @@ Para rodar o projeto localmente, siga os passos abaixo:
 1. Clone o repositório:
 
    ```bash
-   [https://github.com/ViniciusH97/PasswordGenerate.git]
+   https://github.com/ViniciusH97/PasswordGenerate.git
