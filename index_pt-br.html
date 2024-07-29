@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordGenerate - Educação em Segurança de Senhas</title>
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="background_color bg-dark text-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <a class="navbar-brand" href="#">PasswordGenerate</a>
+      <div class="flag-button-container">
+        <button class="btn btn-dark flag-button"
+          onclick="window.electron.changeLanguage('en')">
+          <img src="images/bandeiras/estados_unidos.png" alt="US Flag">
+        </button>
+        <button class="btn btn-dark flag-button"
+          onclick="window.electron.changeLanguage('pt-br')">
+          <img src="images/bandeiras/brasil.png" alt="BR Flag">
+        </button>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="mt-5">PasswordGenerate - Educação em Segurança de Senhas</h1>
+      <p class="lead">Bem-vindo ao PasswordGenerate, seu recurso principal para
+        aprender sobre segurança de senhas e criar senhas fortes e seguras.</p>
+      <h2>Por que a Segurança de Senhas é Importante</h2>
+      <p>Na era digital de hoje, proteger suas contas online com senhas fortes é
+        mais importante do que nunca. Senhas fracas são vulneráveis a tentativas
+        de hacking, colocando suas informações pessoais, dados financeiros e
+        identidade online em risco.</p>
+      <h2>Criando Senhas Fortes</h2>
+      <p>Quando se trata de criar senhas fortes, existem vários princípios-chave
+        a serem lembrados:</p>
+      <ul>
+        <li>Comprimento: Procure senhas com pelo menos 12 caracteres.</li>
+        <li>Complexidade: Inclua uma combinação de letras maiúsculas, letras
+          minúsculas, números e caracteres especiais.</li>
+        <li>Unicidade: Evite usar senhas facilmente adivinháveis, como "senha"
+          ou "123456".</li>
+        <li>Avoiding Common Patterns: Evite padrões ou sequências comuns, como
+          "123456" ou "qwerty".</li>
+      </ul>
+      <h2>Verificador de Senhas</h2>
+      <div class="form-group">
+        <label for="password">Digite sua senha:</label>
+        <input type="password" class="form-control" id="password"
+          placeholder="Senha" oninput="checkPassword()">
+      </div>
+      <div id="passwordStrength"></div>
+      <h2>Dicas para Senhas Fortes</h2>
+      <ul>
+        <li>Evite usar informações facilmente adivinháveis, como seu nome, data
+          de nascimento ou palavras comuns.</li>
+        <li>Considere usar frases de acesso, que são frases mais longas
+          compostas por várias palavras, para maior segurança.</li>
+        <li>Use uma senha diferente para cada uma de suas contas online para
+          evitar que uma única violação comprometa várias contas.</li>
+      </ul>
+      <h2>Mude Agora!</h2>
+      <p>Não espere até que seja tarde demais para proteger suas contas online.
+        Tome medidas proativas para fortalecer suas senhas e proteger seus
+        ativos digitais.</p>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
