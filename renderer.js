@@ -33,4 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
     strengthBadge.innerHTML = "Força da Senha: " + strength.charAt(0).toUpperCase() + strength.slice(1);
   };
 
+  window.GeneratePassword = function () {
+    var length = 12,
+      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*(),.?\":{}|<>",
+      password = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+      password += charset.charAt(Math.floor(Math.random() * n));
+    }
+    document.getElementById("password").value = password;
+    window.checkPassword();
+  };
+
 });
