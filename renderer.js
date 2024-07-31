@@ -14,19 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
     var hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
     var hasSpaces = /\s/.test(password);
 
-    if (window.commonPasswords.includes(password)) {
-      strength = 'fraca';
-    } else if (hasSpaces) {
-      strength = 'fraca';
-    } else if (password.length < 8) {
-      strength = 'fraca';
-    } else if (!hasUpperCase || !hasLowerCase || !hasNumber || !hasSpecialChar) {
-      strength = 'média';
-    } else if (password.length < 12) {
-      strength = 'média';
-    } else {
-      strength = 'forte';
-    }
+    // if (changeLanguage() == 'pt-br') {
+
+      if (window.commonPasswords.includes(password)) {
+        strength = 'fraca';
+      } else if (hasSpaces) {
+        strength = 'fraca';
+      } else if (password.length < 8) {
+        strength = 'fraca';
+      } else if (!hasUpperCase || !hasLowerCase || !hasNumber || !hasSpecialChar) {
+        strength = 'média';
+      } else if (password.length < 12) {
+        strength = 'média';
+      } else {
+        strength = 'forte';
+      }
+    //} Tenho que testar está função ainda
 
     strengthBadge.className = '';
     strengthBadge.classList.add('password-strength-' + strength);
