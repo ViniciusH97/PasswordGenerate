@@ -1,26 +1,83 @@
+:root {
+  --navbar-brand-color: #212121;
+  --background-color: #ffffff;
+  --password-strength-fraca: red;
+  --password-strength-média: yellow;
+  --password-strength-forte: green;
+  --flag-button-bg: black;
+  --navbar-brand-color: black;
+  --container-brand-color: black;
+  --button-text-color: white; 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --navbar-brand-color: #ffffff;
+    --background-color: #212121;
+    --password-strength-fraca: #ff6b6b;
+    --password-strength-média: #ffd93d;
+    --password-strength-forte: #4caf50;
+    --flag-button-bg: #ffffff;
+    --navbar-brand-color: #ffffff;
+    --container-brand-color: #ffffff;
+    --button-text-color: black;
+  }
+}
+
 .navbar-brand {
-  color: #212121;
+  color: var(--button-text-color);
+  background-color: var(--flag-button-bg);
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
 }
 
 .navbar {
   background-color: transparent !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.flag-button-container {
+  position: fixed;
+  top: 5px;
+  right: 8px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  gap: 15px;
+}
+
+.flag-button {
+  background-color: var(--flag-button-bg);
+  border: none;
+  display: flex;          
+  justify-content: center; 
+  align-items: center;    
+}
+
+.flag-button img {
+  width: 25px;
+  height: 18px;
 }
 
 .background_color {
-  background-color: #212121 !important;
+  background-color: var(--background-color) !important;
 }
 
 .password-strength-fraca {
-  color: red;
+  color: var(--password-strength-fraca);
 }
 
 .password-strength-média {
-  color: yellow;
+  color: var(--password-strength-média);
 }
 
 .password-strength-forte {
-  color: green;
+  color: var(--password-strength-forte);
 }
 
 #passwordStrength {
@@ -30,20 +87,18 @@
   margin-top: 10px;
 }
 
-.flag-button-container {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  gap: 10px;
+.container {
+  color: var(--container-brand-color);      
+  margin-top: 70px;
 }
 
-.flag-button {
-  background-color: black;
-  border: none;
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
 }
 
-.flag-button img {
-  width: 30px;
-  height: 20px;
+p {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.2rem;
 }
