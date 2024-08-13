@@ -13,7 +13,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --navbar-brand-color: #ffffff;
-    --background-color: #212121;
+    --background-color: #161a20;
     --password-strength-fraca: #ff6b6b;
     --password-strength-média: #ffd93d;
     --password-strength-forte: #4caf50;
