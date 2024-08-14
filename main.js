@@ -8,6 +8,7 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
+        maximizable: true,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: false,
@@ -41,3 +42,4 @@ app.on('activate', () => {
         createWindow();
     }
 });
+
