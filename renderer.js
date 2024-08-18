@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  window.electron.getCommonPasswords().then(passwords => {
-    window.commonPasswords = passwords;
-  });
-
   window.checkPassword = function () {
     var password = document.getElementById("passwordCheck").value;
     var strengthBadge = document.getElementById("passwordStrength");
@@ -15,29 +11,28 @@ document.addEventListener('DOMContentLoaded', () => {
     var Spaces = /\s/.test(password);
     var tip = '';
 
-    if (window.commonPasswords && window.commonPasswords.includes(password)) {
-      strength = 'fraca';
-      tip = "A senha é muito comum. Ela pode ser descoberta por ataque de dicionário em questão de segundos";
-    } else if (Spaces) {
-      strength = 'fraca';
-      tip = 'A senha possui espaços em branco. Remova-os para torná-la mais segura';
-    } else if (password.length < 8) {
-      strength = 'fraca';
-      tip = 'A senha é fraca porque é muito curta. Acrescente mais caracteres para torná-la mais segura';
-    } else if (!UpperCase || !LowerCase || !Number || !SpecialChar) {
-      strength = 'média';
-      tip = 'Sua senha está com força média. Talvez demoraria algumas horas para descobri-la';
-    } else if (password.length < 12) {
-      strength = 'média';
-      tip = 'Sua senha está com força média. Talvez demoraria algumas horas para descobri-la. Porém, a senha ainda está curta';
-    } else {
-      strength = 'forte';
-      tip = 'Sua senha é forte. Ela demoraria dias, meses ou anos para descobri-la';
-    }
+    window.electron.getCommonPasswords().then(commonPasswords => {
+      if (commonPasswords.includes(password)) {
+        strength = 'Fraca';
+        tip = 'Senha comum, esta senha pode ser descoberta instantaneamente';
+      } else if (Spaces) {
+        strength = 'Fraca';
+        tip = 'A senha não deve conter espaços para maior segurança';
+      } else if (password.length < 8) {
+        strength = 'Fraca';
+        tip = 'Senha muito curta, tente aumentar o comprimento da senha';
+      } else if (!UpperCase || !LowerCase || !Number || !SpecialChar) {
+        strength = 'Média';
+        tip = (password.length < 12) ? 'Senha média, mas curta' : 'Senha média, esta senha pode ser descoberta com um pouco de esforço';
+      } else {
+        strength = 'Forte';
+        tip = 'Senha forte, esta senha é segura para uso, e ela demoraria anos para ser descoberta';
+      }
 
-    strengthBadge.className = '';
-    strengthBadge.classList.add('password-strength-' + strength);
-    strengthBadge.innerHTML = "Força da Senha: " + strength.charAt(0).toUpperCase() + strength.slice(1) + "<br>" + tip;
+      strengthBadge.className = '';
+      strengthBadge.classList.add('password-strength-' + strength);
+      strengthBadge.innerHTML = `Força da Senha: ${strength.charAt(0).toUpperCase() + strength.slice(1)}<br>${tip}`;
+    });
   }
 
   window.GeneratePassword = function () {
@@ -49,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       password += charset.charAt(Math.floor(Math.random() * n));
     }
     console.log('Generated Password:', password);
-    document.getElementById("generatedPassword").value = password;  
+    document.getElementById("generatedPassword").value = password;
     window.checkPassword();
   }
 });

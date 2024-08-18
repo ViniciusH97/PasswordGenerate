@@ -1,6 +1,6 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('electron', {
-  changeLanguage: (lang) => ipcRenderer.send('change-language', lang),
-  getCommonPasswords: () => ipcRenderer.invoke('get-common-passwords')
+  getCommonPasswords: () => ipcRenderer.invoke('get-common-passwords'),
+  on: (channel, callback) => ipcRenderer.on(channel, callback),
 });

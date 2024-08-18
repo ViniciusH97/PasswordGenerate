@@ -1,4 +1,4 @@
-module.exports = [
+const commonPasswords = [
   '123456', 'password', '123456789', '12345678', '12345',
   '1234567', 'qwerty', 'abc123', '111111', 'password1',
   '1234', 'admin', 'letmein', 'welcome', 'monkey',
@@ -6,3 +6,5 @@ module.exports = [
   'senha123', 'senha321', 'nome', 'name', '0987654321', '654321',
   '654', '123', 'abcde', 'abcd', 'abcdefg', 'senha1', 'senha2', 'senha3',
 ];
+
+module.exports = commonPasswords;

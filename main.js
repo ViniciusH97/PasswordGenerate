@@ -16,14 +16,8 @@ function createWindow() {
         }
     });
 
-    mainWindow.loadFile(path.join(__dirname, 'index_pt-br.html'));
-
-    ipcMain.on('change-language', (event, lang) => {
-        if (lang === 'en') {
-            mainWindow.loadFile(path.join(__dirname, 'index_en.html'));
-        } else if (lang === 'pt-br') {
-            mainWindow.loadFile(path.join(__dirname, 'index_pt-br.html'));
-        }
+    mainWindow.webContents.session.clearCache().then(() => {
+        mainWindow.loadFile(path.join(__dirname, 'index.html'));
     });
 
     ipcMain.handle('get-common-passwords', () => commonPasswords);
@@ -42,4 +36,3 @@ app.on('activate', () => {
         createWindow();
     }
 });
-
