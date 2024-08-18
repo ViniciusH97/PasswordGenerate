@@ -13,19 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.electron.getCommonPasswords().then(commonPasswords => {
       if (commonPasswords.includes(password)) {
-        strength = 'Fraca';
-        tip = 'Senha comum, esta senha pode ser descoberta instantaneamente';
+        strength = 'fraca';
+        tip = 'Senha comum, esta senha pode ser descoberta instantâneamente';
       } else if (Spaces) {
-        strength = 'Fraca';
+        strength = 'fraca';
         tip = 'A senha não deve conter espaços para maior segurança';
       } else if (password.length < 8) {
-        strength = 'Fraca';
+        strength = 'fraca';
         tip = 'Senha muito curta, tente aumentar o comprimento da senha';
       } else if (!UpperCase || !LowerCase || !Number || !SpecialChar) {
-        strength = 'Média';
-        tip = (password.length < 12) ? 'Senha média, mas curta' : 'Senha média, esta senha pode ser descoberta com um pouco de esforço';
+        strength = 'média';
+        tip = (password.length < 12) ? 'Senha média, acrescente mais caracter na senha' : 'Senha média, esta senha pode ser descoberta em algumas horas';
       } else {
-        strength = 'Forte';
+        strength = 'forte';
         tip = 'Senha forte, esta senha é segura para uso, e ela demoraria anos para ser descoberta';
       }
 
