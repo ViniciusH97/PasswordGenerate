@@ -29,19 +29,3 @@
 2. **Geração de Senhas**:
    - O usuário pode solicitar a geração de uma nova senha.
    - A aplicação gera uma senha que atende aos critérios de segurança e exibe ao usuário.
-
-## Tecnologias Utilizadas
-
-- **Electron**: Plataforma para criar aplicações desktop usando tecnologias web.
-- **JavaScript**: Linguagem de programação para lógica de aplicação e verificação de senha.
-- **HTML/CSS**: Estrutura e estilo da interface do usuário.
-- **Bootstrap**: Framework para estilização responsiva e moderna.
-
-## Instalação
-
-Para rodar o projeto localmente, siga os passos abaixo:
-
-1. Clone o repositório:
-
-   ```bash
-   https://github.com/ViniciusH97/PasswordGenerate.git
