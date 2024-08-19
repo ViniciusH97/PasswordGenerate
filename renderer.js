@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tip = (password.length < 12) ? 'Senha média, acrescente mais caracter na senha' : 'Senha média, esta senha pode ser descoberta em algumas horas';
       } else {
         strength = 'forte';
-        tip = 'Senha forte, esta senha é segura para uso, e ela demoraria anos para ser descoberta';
+        tip = 'Senha forte, esta senha é segura para uso, e ela demoraria meses ou até anos para ser descoberta';
       }
 
       strengthBadge.className = '';

@@ -4,9 +4,9 @@
   --background-color-light: #ffffff;
   --text-color-dark: #ffffff;
   --text-color-light: #000000;
-  --password-strength-fraca: red;
+  --password-strength-fraca: rgb(222, 34, 34);
   --password-strength-média: yellow;
-  --password-strength-forte: green;
+  --password-strength-forte: rgb(56, 208, 56);
   --button-background-dark: #333333;
   --button-background-light: #dddddd;
   --button-text-dark: #ffffff;
