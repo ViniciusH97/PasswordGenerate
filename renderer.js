@@ -46,4 +46,50 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Generated Password:', password);
     document.getElementById("generatedPassword").value = password;
   }
+
+  window.toggleTheme = function () {
+    const body = document.getElementById('page');
+    const themeIcon = document.getElementById('toggleThemeBtn').querySelector('i');
+    const themeButton = document.getElementById('toggleThemeBtn');
+
+    if (body.classList.contains('bg-dark')) {
+      body.classList.remove('bg-dark', 'text-light');
+      body.classList.add('bg-light', 'text-dark');
+
+      themeButton.style.backgroundColor = '#ffffff';
+      themeButton.style.color = '#000000';
+
+      document.querySelectorAll('button').forEach(el => {
+        el.style.backgroundColor = '#dddddd';
+        el.style.color = '#000000';
+      });
+
+      document.querySelectorAll('a, li, .navbar-brand, h1, p, h3, footer p').forEach(el => {
+        el.style.color = '#000000';
+      });
+
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    } else {
+      body.classList.remove('bg-light', 'text-dark');
+      body.classList.add('bg-dark', 'text-light');
+
+      themeButton.style.backgroundColor = '#000000';
+      themeButton.style.color = '#ffffff';
+
+      document.querySelectorAll('button').forEach(el => {
+        el.style.backgroundColor = '#333333';
+        el.style.color = '#ffffff';
+      });
+
+      document.querySelectorAll('a, li, .navbar-brand, h1, p, h3, footer p').forEach(el => {
+        el.style.color = '#ffffff';
+      });
+
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+    }
+  }
+
 });
+
