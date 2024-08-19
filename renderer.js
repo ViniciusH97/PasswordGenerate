@@ -45,6 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     console.log('Generated Password:', password);
     document.getElementById("generatedPassword").value = password;
-    window.checkPassword();
   }
 });
