@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tip = 'Senha muito curta, tente aumentar o comprimento da senha';
       } else if (!UpperCase || !LowerCase || !Number || !SpecialChar) {
         strength = 'média';
-        tip = (password.length < 12) ? 'Senha média, acrescente mais caracter na senha' : 'Senha média, esta senha pode ser descoberta em algumas horas';
+        tip = (password.length < 12) ? 'Senha média, acrescente mais caracteres na senha, esta senha pode ser descoberta em algumas horas' : 'Senha média, esta senha pode ser descoberta em algumas horas';
       } else {
         strength = 'forte';
         tip = 'Senha forte, esta senha é segura para uso, e ela demoraria meses ou até anos para ser descoberta';
