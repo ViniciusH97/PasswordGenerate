@@ -6,7 +6,7 @@
 
 1. **Verificação de Senhas**: Permite que os usuários verifiquem a força de suas senhas e identifiquem se elas são comuns ou fracas. A aplicação utiliza uma lista de senhas comuns para comparar com a senha inserida pelo usuário e fornece feedback sobre a segurança da senha.
 
-2. **Geração de Senhas Seguras**: Auxilia os usuários na criação de senhas fortes e seguras, que atendem a critérios específicos de comprimento, complexidade e diversidade de caracteres. 
+2. **Geração de Senhas**: Auxilia os usuários na criação de senhas fortes e seguras, que atendem a critérios específicos de comprimento, complexidade e diversidade de caracteres. 
 
 ## Funcionalidades
 
