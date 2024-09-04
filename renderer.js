@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.GeneratePassword = function () {
     var length = parseInt(document.getElementById("passwordLength").value, 10);
+
     if (isNaN(length) || length <= 0) length = 12;
+    
     var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*(),.?\":{}|<>";
     var password = "";
     for (var i = 0, n = charset.length; i < length; ++i) {
