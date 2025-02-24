@@ -2,7 +2,7 @@
 
 ## Descrição
 
-**SecurePass** é uma aplicação desenvolvida para ajudar a comunidade a gerenciar a segurança de suas senhas. O projeto oferece duas funcionalidades principais:
+A ideia inicial seria elaborar um projeto voltado a segurança da informação, com isso pensei em desenvolver a aplicação PasswordGenerate, que foi desenvolvida durante a disciplina Engenharia de Software II para demonstrar ao usuário a força de sua senha e também gerar uma senha conforme a quantidade que o usuário preferir. Lembrando que o tamanho recomendado para garantir a segurança é acima de 12 caracteres.
 
 1. **Verificação de Senhas**: Permite que os usuários verifiquem a força de suas senhas e identifiquem se elas são comuns ou fracas. A aplicação utiliza uma lista de senhas comuns para comparar com a senha inserida pelo usuário e fornece feedback sobre a segurança da senha.
 
