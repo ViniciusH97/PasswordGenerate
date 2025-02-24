@@ -15,7 +15,7 @@
   - Presença de caracteres especiais.
   - Inclusão de letras maiúsculas e minúsculas.
   - Presença de números.
-  - Verificação contra uma lista de senhas comuns.
+  - Verificação com uma lista de senhas comuns.
 
 - **Gerador de Senhas**: Gera senhas aleatórias com base em critérios definidos para garantir a segurança e a robustez das senhas criadas.
 
