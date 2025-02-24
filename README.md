@@ -1,4 +1,4 @@
-# SecurePass - Verificador e Gerador de Senhas Seguras
+# PasswordGenerate - Verificador e Gerador de Senhas Seguras
 
 ## Descrição
 
