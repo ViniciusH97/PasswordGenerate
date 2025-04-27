@@ -66,5 +66,5 @@ npm start
 
 ### Considerações Finais
 
-Caso queira rodar este projeto localmente em seu computador, siga as etapas acima. Se você estiver interessado na versão final empacotada do aplicativo, faremos o build e distribuiremos os arquivos executáveis em breve.
+Caso queira rodar este projeto localmente em seu computador, siga as etapas acima.
 Agradeço pela compreensão!
