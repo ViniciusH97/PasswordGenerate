@@ -6,7 +6,13 @@ A ideia inicial seria elaborar um projeto voltado a segurança da informação, 
 
 1. **Verificação de Senhas**: Permite que os usuários verifiquem a força de suas senhas e identifiquem se elas são comuns ou fracas. A aplicação utiliza uma lista de senhas comuns para comparar com a senha inserida pelo usuário e fornece feedback sobre a segurança da senha.
 
-2. **Geração de Senhas**: Auxilia os usuários na criação de senhas fortes e seguras, que atendem a critérios específicos de comprimento, complexidade e diversidade de caracteres. 
+2. **Geração de Senhas**: Auxilia os usuários na criação de senhas fortes e seguras, que atendem a critérios específicos de comprimento, complexidade e diversidade de caracteres.
+
+## Tecnologias Utilizadas
+
+- Electron: Framework para criar aplicações de desktop com tecnologias web (HTML, CSS, JavaScript).
+- JavaScript: Lógica de programação da aplicação.
+- HTML/CSS: Estrutura e estilização da interface gráfica.
 
 ## Funcionalidades
 
@@ -29,3 +35,36 @@ A ideia inicial seria elaborar um projeto voltado a segurança da informação, 
 2. **Geração de Senhas**:
    - O usuário pode solicitar a geração de uma nova senha.
    - A aplicação gera uma senha que atende aos critérios de segurança e exibe ao usuário.
+  
+## Observações importantes
+
+- **Verificação de Senha:** A funcionalidade de verificação de senha, faz a validação de uma senha gerada e verifica se atende a determinados critérios de segurança, não está funcionando corretamente quando o projeto é executado como uma aplicação web. Isso ocorre porque o Electron precisa ser empacotado e executado como uma aplicação desktop para acessar certas funcionalidades locais e realizar a verificação de forma apropriada.
+
+- **Hospedagem:** Este projeto é desenvolvido com o Electron, uma tecnologia que permite criar aplicativos de desktop. Isso significa que a aplicação não pode ser hospedada diretamente no GitHub Pages, pois o Electron requer um ambiente que suporte o uso de Node.js e recursos nativos do sistema operacional.
+
+### Como Rodar Localmente
+
+Para executar o aplicativo em sua máquina, siga o passo a passo abaixo:
+
+Clonar o repositório:
+
+```bash
+git clone https://github.com/ViniciusH97/PasswordGenerate.git
+```
+
+Instalar as dependências: No diretório do projeto, execute:
+
+```bash
+npm install
+```
+
+Rodar o aplicativo: Após instalar as dependências, execute o seguinte comando para iniciar o aplicativo Electron:
+
+```bash
+npm start
+```
+
+### Considerações Finais
+
+Caso queira rodar este projeto localmente em seu computador, siga as etapas acima. Se você estiver interessado na versão final empacotada do aplicativo, faremos o build e distribuiremos os arquivos executáveis em breve.
+Agradeço pela compreensão!
