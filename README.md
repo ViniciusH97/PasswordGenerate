@@ -38,7 +38,7 @@ A ideia inicial seria elaborar um projeto voltado a segurança da informação, 
   
 ## Observações importantes
 
-- **Verificação de Senha:** A funcionalidade de verificação de senha, faz a validação de uma senha gerada e verifica se atende a determinados critérios de segurança, não está funcionando corretamente quando o projeto é executado como uma aplicação web. Isso ocorre porque o Electron precisa ser empacotado e executado como uma aplicação desktop para acessar certas funcionalidades locais e realizar a verificação de forma apropriada.
+- **Verificação de Senha:** A funcionalidade de verificação de senha, faz a validação de uma senha gerada e verifica se atende aos critérios de segurança, não está funcionando corretamente quando o projeto é executado como uma aplicação web. Isso ocorre porque o Electron precisa ser empacotado e executado como uma aplicação desktop para acessar certas funcionalidades locais e realizar a verificação de forma apropriada.
 
 - **Hospedagem:** Este projeto é desenvolvido com o Electron, uma tecnologia que permite criar aplicativos de desktop. Isso significa que a aplicação não pode ser hospedada diretamente no GitHub Pages, pois o Electron requer um ambiente que suporte o uso de Node.js e recursos nativos do sistema operacional.
 
